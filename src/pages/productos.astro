@@ -1,0 +1,129 @@
+---
+import { sanityClient } from 'sanity:client';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+type Producto = {
+  nombre: string | null;
+  descripcion: string | null;
+  imagenUrl: string | null;
+};
+
+const productos = await sanityClient.fetch<Producto[]>(
+  `*[_type == "producto"]{
+    nombre,
+    descripcion,
+    "imagenUrl": imagen.asset->url
+  }`,
+);
+---
+
+<BaseLayout title="Productos | Laboratorio Mendieta">
+  <main id="contenido" class="products-page">
+    <header class="products-header">
+      <p class="eyebrow">Laboratorio Mendieta</p>
+      <h1>Nuestros productos</h1>
+      <p>Conoce los productos disponibles de nuestro laboratorio.</p>
+    </header>
+
+    {productos.length > 0 ? (
+      <section class="products-grid" aria-label="Lista de productos">
+        {productos.map((producto) => (
+          <article class="product-card">
+            {producto.imagenUrl && (
+              <img
+                class="product-image"
+                src={producto.imagenUrl}
+                alt={producto.nombre ? `Imagen de ${producto.nombre}` : 'Imagen del producto'}
+                loading="lazy"
+              />
+            )}
+            <div class="product-content">
+              <h2>{producto.nombre ?? 'Producto sin nombre'}</h2>
+              {producto.descripcion && <p>{producto.descripcion}</p>}
+            </div>
+          </article>
+        ))}
+      </section>
+    ) : (
+      <p class="empty-message">No hay productos disponibles por el momento.</p>
+    )}
+  </main>
+</BaseLayout>
+
+<style>
+  .products-page {
+    width: min(100% - 2rem, 1100px);
+    margin: 0 auto;
+    padding: 3rem 0 5rem;
+  }
+
+  .products-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .eyebrow {
+    margin: 0 0 0.5rem;
+    color: #52705c;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .products-header h1 {
+    margin: 0;
+    color: #24352a;
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  .products-header > p:last-child {
+    color: #59645d;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 1.25rem;
+  }
+
+  .product-card {
+    overflow: hidden;
+    border: 1px solid #e1e8e2;
+    border-radius: 0.75rem;
+    background: #fff;
+    box-shadow: 0 4px 14px rgb(36 53 42 / 7%);
+  }
+
+  .product-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: #f2f5f2;
+  }
+
+  .product-content {
+    padding: 1.25rem;
+  }
+
+  .product-content h2 {
+    margin: 0 0 0.5rem;
+    color: #24352a;
+    font-size: 1.25rem;
+  }
+
+  .product-content p,
+  .empty-message {
+    margin: 0;
+    color: #59645d;
+    line-height: 1.6;
+  }
+
+  .empty-message {
+    padding: 2rem;
+    border-radius: 0.75rem;
+    background: #f2f5f2;
+    text-align: center;
+  }
+</style>

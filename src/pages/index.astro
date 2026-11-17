@@ -1,0 +1,283 @@
+---
+// Importamos el esqueleto maestro
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Laboratorio Mendieta | Productos Químicos e Higiénicos en Managua">
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="hero-badge"><span class="badge-dot" aria-hidden="true"></span> Innovando en Química desde 2024 <span class="badge-separator">•</span> Managua, Nicaragua</p>
+          <h1 id="hero-title">Productos químicos e higiénicos <span>de alta calidad</span></h1>
+          <p class="hero-description">Soluciones efectivas, seguras y sostenibles para el hogar, el comercio y la industria, con respaldo técnico especializado.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contacto">Solicitar Información <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#servicios">Conocer Servicios <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-trust"><span class="trust-check" aria-hidden="true">✓</span> Calidad, innovación y asesoría en cada solución</div>
+        </div>
+
+        <div class="hero-art" role="img" aria-label="Ilustración de productos químicos, higiene y seguridad">
+          <div class="art-glow"></div>
+          <div class="art-circle circle-back"></div>
+          <div class="art-circle circle-front"></div>
+          <div class="art-card card-purity">
+            <span class="floating-icon icon-aqua">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5C19 13 12 20 12 28a12 12 0 0 0 24 0C36 20 29 13 24 5Z"/><path d="M18 29a6 6 0 0 0 6 6"/></svg>
+            </span>
+            <span><strong>Pureza</strong><small>En cada fórmula</small></span>
+          </div>
+          <div class="flask-illustration">
+            <svg viewBox="0 0 210 250" aria-hidden="true">
+              <defs>
+                <linearGradient id="glass" x1="0" x2="1">
+                  <stop offset="0" stop-color="#fff" stop-opacity=".92"/>
+                  <stop offset=".55" stop-color="#e7faff" stop-opacity=".72"/>
+                  <stop offset="1" stop-color="#fff" stop-opacity=".92"/>
+                </linearGradient>
+                <linearGradient id="liquid" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stop-color="#38c9d7"/>
+                  <stop offset="1" stop-color="#10b981"/>
+                </linearGradient>
+                <clipPath id="flask-interior" clipPathUnits="userSpaceOnUse">
+                  <path d="M79 20h52v15h-9v53l48 81c13 22-3 49-28 49H69c-25 0-41-27-28-49l48-81V35h-10V20Z"/>
+                </clipPath>
+              </defs>
+              <path class="flask-glass" d="M79 20h52v15h-9v53l48 81c13 22-3 49-28 49H69c-25 0-41-27-28-49l48-81V35h-10V20Z"/>
+              <g clip-path="url(#flask-interior)">
+                <path class="flask-liquid" d="M25 145c22-9 49 8 77 0 27-8 49 7 83-3l15 26c8 14-2 30-18 30H36c-16 0-26-16-18-30l7-23Z"/>
+                <circle class="flask-bubble bubble-a" cx="105" cy="170" r="5"/>
+                <circle class="flask-bubble bubble-b" cx="133" cy="154" r="3"/>
+                <circle class="flask-bubble bubble-c" cx="145" cy="180" r="4"/>
+              </g>
+              <path class="flask-highlight" d="M92 42v46l-17 29M111 23h18"/>
+            </svg>
+          </div>
+          <div class="art-card card-safety">
+            <span class="floating-icon icon-mint">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 5 15 6v11c0 10-6 17-15 21C15 39 9 32 9 22V11l15-6Z"/><path d="m17 23 5 5 10-11"/></svg>
+            </span>
+            <span><strong>Seguridad</strong><small>Asesoría especializada</small></span>
+          </div>
+          <span class="art-sparkle sparkle-one" aria-hidden="true">✳</span>
+          <span class="art-sparkle sparkle-two" aria-hidden="true">✦</span>
+          <span class="art-dot dot-one" aria-hidden="true"></span>
+          <span class="art-dot dot-two" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="hero-bottom-fade" aria-hidden="true"></div>
+    </section>
+
+    <section class="section about-section" id="acerca" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-intro">
+          <div class="section-heading">
+            <p class="eyebrow">Nuestro compromiso</p>
+            <h2 id="about-title">Sobre Nosotros</h2>
+          </div>
+          <p class="about-description">En Laboratorio Mendieta, nos especializamos en la fabricación de productos químicos de la más alta calidad. Nuestro compromiso con la innovación y la sostenibilidad nos sitúa a la vanguardia de la industria, proporcionando soluciones efectivas y seguras para nuestros clientes.</p>
+        </div>
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <div class="pillar-icon icon-aqua">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 5 15 6v11c0 10-6 17-15 21C15 39 9 32 9 22V11l15-6Z"/><path d="m17 23 5 5 10-11"/></svg>
+            </div>
+            <span class="card-index">01</span>
+            <h3>Alta Calidad</h3>
+            <p>Estándares rigurosos para crear productos confiables y consistentes.</p>
+          </article>
+          <article class="pillar-card">
+            <div class="pillar-icon icon-mint">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M9 35c1-16 10-25 30-27-2 20-11 29-27 30"/><path d="M12 37c6-8 12-13 22-19"/></svg>
+            </div>
+            <span class="card-index">02</span>
+            <h3>Innovación Sostenible</h3>
+            <p>Desarrollamos soluciones con visión de futuro y compromiso responsable.</p>
+          </article>
+          <article class="pillar-card">
+            <div class="pillar-icon icon-soft-blue">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5C19 13 12 20 12 28a12 12 0 0 0 24 0C36 20 29 13 24 5Z"/><path d="m19 28 4 4 7-8"/></svg>
+            </div>
+            <span class="card-index">03</span>
+            <h3>Soluciones Seguras</h3>
+            <p>Acompañamiento técnico para la aplicación responsable de cada producto.</p>
+          </article>
+        </div>
+        <div class="mission-grid">
+          <article class="mission-card">
+            <div class="mission-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="24" cy="24" r="18" fill="none" stroke="#0891B2" stroke-width="2"/>
+                <circle cx="24" cy="24" r="11" fill="none" stroke="#10B981" stroke-width="2"/>
+                <path d="M24 18c-2.4 3.5-4 5.4-4 7.6a4 4 0 0 0 8 0c0-2.2-1.6-4.1-4-7.6Z" fill="none" stroke="#0891B2" stroke-linejoin="round" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>Nuestra Misión</h3>
+            <p>Formular, fabricar y suministrar productos químicos e higiénicos de alta eficacia y seguridad para el hogar, el comercio y la industria en Nicaragua. Acompañamos cada solución con asesoría técnica especializada, control de calidad riguroso y desarrollos a la medida que protegen la salud y optimizan los procesos de nuestros clientes.</p>
+          </article>
+          <article class="mission-card">
+            <div class="mission-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M5 24s7-12 19-12 19 12 19 12-7 12-19 12S5 24 5 24Z" fill="none" stroke="#0891B2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                <path d="M24 18a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z" fill="none" stroke="#0891B2" stroke-width="2"/>
+                <path d="M24 27c1-5 5-9 12-10-1 7-5 11-11 12m-1-2 7-7" fill="none" stroke="#10B981" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>Nuestra Visión</h3>
+            <p>Consolidarnos como el laboratorio químico e higiénico referente en Nicaragua por nuestra innovación sostenible, excelencia técnica y confiabilidad, impulsando estándares superiores de limpieza, desinfección y formulación responsable en toda la región.</p>
+          </article>
+          <article class="mission-card">
+            <div class="mission-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="m24 5 16 6v11c0 11-6.5 18-16 22C14.5 40 8 33 8 22V11l16-6Z" fill="none" stroke="#0891B2" stroke-linejoin="round" stroke-width="2"/>
+                <path d="m16 24 5 5 11-12" fill="none" stroke="#10B981" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+              </svg>
+            </div>
+            <h3>Nuestros Valores</h3>
+            <ul class="mission-values">
+              <li>Calidad y Rigor Técnico</li>
+              <li>Innovación Sostenible</li>
+              <li>Asesoría Cercana</li>
+              <li>Seguridad y Responsabilidad</li>
+              <li>Integridad y Confianza</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="servicios" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-heading section-heading-centered">
+          <p class="eyebrow">Soluciones químicas para todos los sectores</p>
+          <h2 id="services-title">Nuestros Servicios</h2>
+          <p class="section-subtitle">Conocimiento técnico y soluciones a la medida para cada desafío.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-top"><span class="service-icon icon-aqua"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 7h12M21 7v13L10 38a2 2 0 0 0 2 3h24a2 2 0 0 0 2-3L27 20V7"/><path d="M15 31h18"/><circle cx="21" cy="35" r="1.5"/><circle cx="28" cy="34" r="1"/></svg></span><span class="service-number">01</span></div>
+            <h3>Desarrollo de Productos Químicos</h3>
+            <p>Creamos productos químicos personalizados según las necesidades de nuestros clientes.</p>
+            <a class="service-link" href="#contacto" data-service="Desarrollo de Productos Químicos">Consultar servicio <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="service-icon icon-mint"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 5 15 6v11c0 10-6 17-15 21C15 39 9 32 9 22V11l15-6Z"/><path d="M24 15v11m0 7h.02"/></svg></span><span class="service-number">02</span></div>
+            <h3>Asesoría Técnica Especializada</h3>
+            <p>Ofrecemos asistencia técnica para la aplicación de nuestros productos.</p>
+            <a class="service-link" href="#contacto" data-service="Asesoría Técnica Especializada">Consultar servicio <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span class="service-icon icon-soft-blue"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 10v12a14 14 0 0 0 28 0V10M10 10h8m12 0h8M24 8v22"/><path d="m17 24 5 5 10-11"/></svg></span><span class="service-number">03</span></div>
+            <h3>Pruebas de Calidad</h3>
+            <p>Realizamos rigurosas pruebas para asegurar la calidad de nuestros productos.</p>
+            <a class="service-link" href="#contacto" data-service="Pruebas de Calidad">Consultar servicio <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-promo" aria-labelledby="catalog-promo-title">
+      <div class="container">
+        <div class="catalog-promo-card">
+          <div>
+            <p class="eyebrow">Calidad para cada espacio</p>
+            <h2 id="catalog-promo-title">Conoce Nuestra Línea de Productos Biodegradables</h2>
+            <p>Explora soluciones de calidad industrial y doméstica.<br>Encuentra la fórmula ideal para tus espacios y necesidades.</p>
+          </div>
+          <a class="button button-primary" href="/catalogo">Abrir Catálogo Oficial <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials-section" id="testimonios" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-heading section-heading-centered">
+          <p class="eyebrow">La confianza de nuestros clientes</p>
+          <h2 id="testimonials-title">Testimonios</h2>
+        </div>
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-top"><span class="stars" aria-label="5 de 5 estrellas">★★★★★</span><span class="quote-mark" aria-hidden="true">“</span></div>
+            <h3>¡Excelente calidad en productos químicos!</h3>
+            <blockquote>Desde que comenzamos a utilizar los productos de Laboratorio Mendieta, la calidad y eficiencia de nuestra producción han mejorado notablemente.</blockquote>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-top"><span class="stars" aria-label="5 de 5 estrellas">★★★★★</span><span class="quote-mark" aria-hidden="true">“</span></div>
+            <h3>Servicio al cliente excepcional</h3>
+            <blockquote>El equipo de Laboratorio Mendieta es muy profesional y siempre está dispuesto a ayudar. ¡Recomiendo sus servicios al 100%!</blockquote>
+          </article>
+          <article class="testimonial-card">
+            <div class="testimonial-top"><span class="stars" aria-label="5 de 5 estrellas">★★★★★</span><span class="quote-mark" aria-hidden="true">“</span></div>
+            <h3>Mucho más que una fábrica</h3>
+            <blockquote>No solo ofrecen productos, sino también un gran soporte técnico y asesoría que realmente marca la diferencia.</blockquote>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contacto" aria-labelledby="contact-title">
+      <div class="container contact-layout">
+        <div class="contact-copy">
+          <p class="eyebrow">Hablemos de su proyecto</p>
+          <h2 id="contact-title">Contáctanos</h2>
+          <p class="contact-intro">Estamos listos para asesorarte con tus requerimientos químicos e higiénicos.</p>
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="contact-icon icon-aqua"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M39 20c0 11-15 23-15 23S9 31 9 20a15 15 0 1 1 30 0Z"/><circle cx="24" cy="20" r="5"/></svg></span>
+              <div><span class="contact-label">Dirección</span><address>Semáforos Linda Vista 3 Oeste 125 vrs Norte, Managua</address></div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon icon-mint"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M15 8h18a5 5 0 0 1 5 5v22a5 5 0 0 1-5 5H15a5 5 0 0 1-5-5V13a5 5 0 0 1 5-5Z"/><path d="M20 13h8m-4 22h.02"/></svg></span>
+              <div><span class="contact-label">Teléfono / WhatsApp</span><a href="https://wa.me/50582228669" target="_blank" rel="noopener noreferrer">+505 82228669</a></div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon icon-soft-blue"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="11" width="34" height="26" rx="3"/><path d="m9 14 15 12 15-12"/></svg></span>
+              <div><span class="contact-label">Correo electrónico</span><a href="mailto:ventas@laboratoriomendieta.com">ventas@laboratoriomendieta.com</a></div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon icon-aqua"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c5 5 7 11 7 17s-2 12-7 17c-5-5-7-11-7-17s2-12 7-17Z"/></svg></span>
+              <div><span class="contact-label">Sitio web</span><a href="https://laboratoriomendieta.com" target="_blank" rel="noopener noreferrer">laboratoriomendieta.com</a></div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-heading">
+            <span class="form-kicker">RESPUESTA PERSONALIZADA</span>
+            <h3>Cuéntenos qué necesita</h3>
+            <p>Complete el formulario y continúe la conversación por WhatsApp.</p>
+          </div>
+          <div class="form-field">
+            <label for="name">Nombre completo <span aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Su nombre" required aria-describedby="name-error">
+            <small class="field-error" id="name-error"></small>
+          </div>
+          <div class="form-field">
+            <label for="reply-contact">Teléfono o correo <span aria-hidden="true">*</span></label>
+            <input id="reply-contact" name="replyContact" type="text" autocomplete="email" placeholder="¿Cómo podemos contactarle?" required aria-describedby="reply-contact-error">
+            <small class="field-error" id="reply-contact-error"></small>
+          </div>
+          <div class="form-field">
+            <label for="service">Servicio de interés <span aria-hidden="true">*</span></label>
+            <select id="service" name="service" required aria-describedby="service-error">
+              <option value="">Seleccione un servicio</option>
+              <option>Desarrollo de Productos Químicos</option>
+              <option>Asesoría Técnica Especializada</option>
+              <option>Pruebas de Calidad</option>
+            </select>
+            <small class="field-error" id="service-error"></small>
+          </div>
+          <div class="form-field">
+            <label for="message">Mensaje <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="3" placeholder="Describa brevemente su requerimiento..." required aria-describedby="message-error"></textarea>
+            <small class="field-error" id="message-error"></small>
+          </div>
+          <button class="button button-primary form-submit" type="submit">Continuar por WhatsApp <span aria-hidden="true">→</span></button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <p class="form-note">Al continuar, se abrirá WhatsApp con su mensaje listo para enviar.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
